@@ -1,0 +1,74 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    padding: 20px;
+    color: rgb(3, 3, 3);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+/* Grid Layout for Third Places */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates a 3-column grid */
+    gap: 20px; /* Adds space between grid items */
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Individual Grid Item (Each third place) */
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Box for Each Third Place (Circle Shape) */
+.place-box {
+    background-color: rgb(0, 0, 0);
+    color: white; /* Text color is white */
+    border-radius: 50%; /* Makes the box circular */
+    width: 200px; /* Set fixed width for the circle */
+    height: 200px; /* Set fixed height for the circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5em; /* Make text larger inside the circle */
+    font-weight: bold; /* Make text bold */
+    transition: transform 0.3s ease;
+}
+
+.place-box:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* 1 column on small screens */
+    }
+}

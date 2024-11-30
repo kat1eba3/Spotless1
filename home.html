@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotless</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://use.typekit.net/hie8usn.css">
+</head>
+
+<body>
+
+<header>
+    <div class="menu-bar">
+        <div class="website-name">
+            <a href="home.html">
+                <img src="home_img/SPOTLESS_logoo.png" alt="Spotless Logo" class="logo">
+            </a>
+        </div>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="spots.html">Spots</a></li>
+                <li><a href="contact">misc</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="floating-images"></div>
+
+</header>
+
+<!-- Parallax Section 1 (Spotless in Oval) -->
+<section class="parallax" id="section1">
+    <a href="about.html">
+        <img src="home_img/SPOTLESS_logoo.png" alt="Spotless Logo" class="centered-image">
+    </a>
+</section>
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", () => {
+    const container = document.getElementById("floating-images");
+
+    // Array of image paths
+    const images = [
+        "home_img/spotless_web_circle1.png",
+        "home_img/spotless_web_circle2.png",
+        "home_img/spotless_web_circle3.png",
+        "home_img/spotless_web_circle4.png",
+
+    ];
+
+    // Function to create a floating image
+    function createFloatingImage(src) {
+        const img = document.createElement("img");
+        img.src = src;
+        img.classList.add("floating-image");
+
+        // Randomize position, size, and animation duration
+
+        img.style.top = `${Math.random() * 100}vh`;
+        img.style.left = `${Math.random() * 100}vw`;
+        img.style.animationDuration = `${Math.random() * 5 + 5}s`; // 5-10 seconds
+
+        container.appendChild(img);
+    }
+
+    // Add each image to the screen
+    images.forEach((src) => createFloatingImage(src));
+});
+
+</script>
+
+</body>
+
+</html>

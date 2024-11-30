@@ -1,0 +1,72 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Funnel Display', sans-serif;
+}
+
+/* Parallax Sections */
+section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+}
+
+/* About Section */
+.about-section {
+    height: 100vh;
+    background-image: url('path-to-your-background-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+}
+
+.parallax-text h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    font-family: 'Funnel Display', sans-serif;
+    font-weight: 700;
+}
+
+.parallax-text p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    max-width: 800px;
+    text-align: left;
+}
+
+/* Circle Section */
+.circle-section {
+    height: 100vh;
+    position: relative;
+}
+
+/* Circle Styles */
+.circle {
+    width: 200px;
+    height: 200px;
+    border: 5px solid #000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 1s ease;
+}
+
+.circle-text {
+    font-size: 1.5em;
+    color: white;
+    text-align: center;
+    font-family: 'Funnel Display', sans-serif;
+}
+
+/* Circle transitions when scrolled */
+.circle[data-state="scrolled"] {
+    background-color: #000;
+}
